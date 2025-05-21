@@ -36,8 +36,9 @@
                 <a href="Resume - Tirth.pdf" class="btn secondary" target="_blank">View Resume</a>
             </div>
         </div>
+        <!-- Hero Section Scroll Arrow -->
         <a href="#about" class="scroll-arrow">
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-angle-down"></i>
         </a>
     </section>
 
@@ -76,21 +77,63 @@
                 </div>
             </div>
         </div>
+        <!-- Scroll Arrow After About Section -->
+        <div class="scroll-arrow" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">
+            <i class="fas fa-angle-down"></i>
+        </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <h2>Experience</h2>
         <div class="timeline">
+            <!-- Prediction Guard Experience -->
             <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Position Title</h3>
-                    <h4>Company Name</h4>
-                    <p class="date">Duration</p>
-                    <ul>
-                        <li>Key achievement or responsibility</li>
-                        <li>Another key achievement</li>
-                    </ul>
+                <div class="timeline-content" style="display: flex; align-items: flex-start; gap: 24px;">
+                    <img src="images/PG.jpg" alt="Prediction Guard Logo" class="experience-logo">
+                    <div>
+                        <h3>AI Engineer - Intern</h3>
+                        <h4>Prediction Guard</h4>
+                        <p class="date">January 2025 - May 2025</p>
+                        <ul>
+                            <li>Developed and deployed GenAI sales agents using LangChain and Prediction Guard APIs, automating outreach and lead qualification to reduce manual effort and scale outreach volume by 2x–3x.</li>
+                            <li>Built a synthetic dataset with persona-level transcripts and lead classifications to train and benchmark LLM-based agents for real-world sales scenarios.</li>
+                            <li>Designed and tested an AI-driven sales pipeline that reduced cost per qualified lead from $50–$200 to under $0.03 and decreased sales cycle time from 13 hours to 4 hours.</li>
+                            <li>Presented simulation findings at INFORMS and MWDSI, highlighting trade-offs between AI autonomy and human oversight for responsible enterprise AI adoption.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Lake Shore Experience -->
+            <div class="timeline-item">
+                <div class="timeline-content" style="display: flex; align-items: flex-start; gap: 24px;">
+                    <img src="images/LakeShore.jpeg" alt="Lake Shore Logo" class="experience-logo">
+                    <div>
+                        <h3>Data Analyst</h3>
+                        <h4>Lake Shore</h4>
+                        <p class="date">Mumbai, India | June 2022 – May 2024</p>
+                        <ul>
+                            <li>Optimized leasing operations by building automated dashboards and streamlining data workflows, reducing processing time for over 600 tenant records by 40%.</li>
+                            <li>Partnered with the Investments team to create scenario-based financial models, improving budget accuracy and driving strategic planning.</li>
+                            <li>Conducted profitability analysis and predictive modeling to identify underperforming assets, leading to targeted removals and a 30% boost in asset income.</li>
+                            <li>Built interactive KPI dashboards tracking lease status, occupancy, and revenue trends, enabling early detection of operational inefficiencies.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Hospitality Minds Experience -->
+            <div class="timeline-item">
+                <div class="timeline-content" style="display: flex; align-items: flex-start; gap: 24px;">
+                    <img src="images/hospitality Minds.png" alt="Hospitality Minds Logo" class="experience-logo">
+                    <div>
+                        <h3>Marketing Analyst Intern</h3>
+                        <h4>Hospitality Minds</h4>
+                        <p class="date">Mumbai, India | May 2021 – September 2021</p>
+                        <ul>
+                            <li>Conducted competitor and market analysis to uncover strategic positioning opportunities, driving acquisition of new B2B clients.</li>
+                            <li>Built Power BI dashboards and executed optimization campaigns, resulting in a 26% increase in cross-platform brand visibility.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -245,23 +245,28 @@ section h2 {
 
 /* Experience Section */
 .timeline {
-    max-width: 800px;
+    max-width: 100%; /* Allow timeline to fill the experience section */
+    width: 100%;
     margin: 0 auto;
-    background: transparent;
 }
 
+/* Add back the box styling for experience timeline items */
 .timeline-item {
     position: relative;
     padding: 2rem;
     background: #18222D;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 16px;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     color: #E3EAF2;
+    border: 1.5px solid rgba(128, 128, 128, 0.18);
+    max-width: 100%;
+    width: 100%;
 }
 
 .timeline-content h3 {
-    color: #2c3e50;
+    color: #fff; /* Make position title bright white for better readability */
+    font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
@@ -274,6 +279,18 @@ section h2 {
     color: #666;
     font-style: italic;
     margin-bottom: 1rem;
+}
+
+/* Experience Section Logo Styling */
+.experience-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
 /* Contact Section */
@@ -514,20 +531,25 @@ footer {
     white-space: nowrap;
 }
 
-/* Scroll Arrow */
+/* Updated scroll-arrow styling */
 .scroll-arrow {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 2rem;
-    color: rgba(128, 128, 128, 0.7); /* Changed from teal to subtle grey */
+    color: rgba(128, 128, 128, 0.7);
     animation: bounce 2s infinite;
     cursor: pointer;
     text-decoration: none;
 }
 
-.scroll-arrow:hover {
+.scroll-arrow i {
+    font-size: 2.5rem;
+    color: rgba(128, 128, 128, 0.7);
+}
+
+.scroll-arrow:hover i {
     color: #1E88E5;
 }
 
@@ -584,4 +606,11 @@ footer {
 .education-item div p {
     margin: 0;
     text-align: left;
+}
+
+/* Adjusted the experience section rectangle width */
+.experience {
+    max-width: 90vw; /* Use 90% of the viewport width for maximum space */
+    width: 90vw;
+    margin: 0 auto;
 }
