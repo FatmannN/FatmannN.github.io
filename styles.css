@@ -51,7 +51,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #64FFDA;
+    color: rgba(128, 128, 128, 0.7); /* Changed from teal to subtle grey */
 }
 
 /* Hero Section */
@@ -144,9 +144,43 @@ section h2 {
 
 /* About Section */
 .about-content {
-    max-width: 800px;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
     margin: 0 auto;
-    background: transparent;
+    flex-direction: row; /* Changed to row to align image and text side by side */
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Align image to the left */
+}
+
+.about-image img {
+    width: 350px; /* Increased size */
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    margin-top: 120px; /* Maintained alignment */
+}
+
+.about-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align the text vertically */
+}
+
+.about-details h2 {
+    margin-bottom: 10px; /* Reduced gap between 'Who I Am' and description */
+}
+
+.about-details p {
+    margin-bottom: 30px; /* Increased gap between description and education */
 }
 
 .about-text {
@@ -281,7 +315,7 @@ section h2 {
 }
 
 .social-links a:hover {
-    color: #64FFDA;
+    color: rgba(128, 128, 128, 0.7); /* Changed from teal to subtle grey */
 }
 
 /* Footer */
@@ -336,7 +370,7 @@ footer {
     top: 0;
     bottom: 0;
     width: 1px;
-    background: #4fc3f7;
+    background: rgba(128, 128, 128, 0.7); /* Changed from teal to subtle grey */
     z-index: 0;
 }
 
@@ -346,7 +380,7 @@ footer {
     margin-right: 18px;
     width: 12px;
     height: 12px;
-    background: #4fc3f7;
+    background: rgba(128, 128, 128, 0.7); /* Changed from teal to subtle grey */
     border-radius: 50%;
     z-index: 1;
     align-self: flex-start;
@@ -382,4 +416,172 @@ footer {
 
 .education-milestone:last-child {
     margin-bottom: 0;
-} 
+}
+
+/* Education Section */
+.education {
+    border: 1px solid rgba(128, 128, 128, 0.3); /* Changed border to a subtle grey */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: transparent; /* No background filling */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.education h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: rgba(128, 128, 128, 0.7); /* Changed from teal to subtle grey */
+}
+
+.education h3 {
+    text-align: left; /* Left-align the heading */
+    margin-bottom: 10px; /* Added a bit of space after the heading */
+}
+
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.education-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-dot {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(128, 128, 128, 0.7); /* Changed from teal to subtle grey */
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 10px;
+}
+
+.education-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.education-content h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #E3EAF2;
+}
+
+.education-content .degree {
+    font-size: 1.2rem;
+    color: #A0CFFF;
+    margin: 5px 0;
+}
+
+.education-content .date {
+    font-size: 1rem;
+    color: #90CAF9;
+}
+
+.education-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Adjust font size for role in Education section */
+.education-content .role {
+    font-size: 0.9em;
+    color: #A0CFFF;
+    white-space: nowrap;
+}
+
+/* Scroll Arrow */
+.scroll-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: rgba(128, 128, 128, 0.7); /* Changed from teal to subtle grey */
+    animation: bounce 2s infinite;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.scroll-arrow:hover {
+    color: #1E88E5;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* Profile Image Styling */
+.profile-image {
+    width: 300px; /* Increased size of the profile image */
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 3px solid rgba(128, 128, 128, 0.3); /* Changed from teal to subtle grey */
+    margin-bottom: 20px;
+}
+
+/* Education Section Styling */
+.education {
+    border: 1px solid rgba(128, 128, 128, 0.3); /* Changed border to a subtle grey */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: transparent; /* No background filling */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.education-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.education-item div p {
+    margin: 0;
+    text-align: left;
+}
