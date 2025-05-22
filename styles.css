@@ -471,6 +471,7 @@ footer {
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
+    align-items: flex-start;
 }
 
 .education-logo {
@@ -591,6 +592,7 @@ footer {
     align-items: center;
     gap: 20px;
     margin-bottom: 20px;
+    align-items: flex-start;
 }
 
 .education-logo {
@@ -606,6 +608,13 @@ footer {
 .education-item div p {
     margin: 0;
     text-align: left;
+    text-align: left !important;
+    width: 100%;
+}
+
+.education-item div {
+    width: 100%;
+    text-align: left !important;
 }
 
 /* Adjusted the experience section rectangle width */
@@ -613,4 +622,174 @@ footer {
     max-width: 90vw; /* Use 90% of the viewport width for maximum space */
     width: 90vw;
     margin: 0 auto;
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 600px) {
+    .nav-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem 1rem;
+    }
+    .logo {
+        margin-bottom: 0.5rem;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 2rem 0.5rem 4rem 0.5rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .about-content {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .about-image img, .profile-image {
+        width: 160px !important;
+        height: 160px !important;
+        margin-top: 0;
+    }
+    .about-details {
+        align-items: center;
+        text-align: center;
+    }
+    .education {
+        padding: 10px;
+    }
+    .education-item {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .education-logo {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0;
+    }
+    .project-card {
+        padding: 1rem;
+    }
+    .timeline-item {
+        padding: 1rem;
+    }
+    .experience-logo {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    section {
+        padding: 2rem 0.5rem;
+    }
+    .contact-content {
+        padding: 0 0.5rem;
+    }
+    .scroll-arrow {
+        font-size: 1.5rem;
+        bottom: 10px;
+    }
+    .scroll-arrow i {
+        font-size: 2rem;
+    }
+    footer {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Collapsible Experience Section */
+.collapsible-experience .timeline-summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 24px;
+}
+.collapsible-experience .summary-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.collapsible-experience .arrow {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    transition: transform 0.2s;
+    user-select: none;
+}
+.collapsible-experience .timeline-details {
+    margin-top: 1rem;
+    padding-left: 104px;
+    transition: max-height 0.3s ease;
+}
+@media (max-width: 600px) {
+    .collapsible-experience .timeline-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .collapsible-experience .timeline-details {
+        padding-left: 0;
+    }
+}
+.collapsible-experience .arrow {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-left: 0;
+    vertical-align: middle;
+    transition: transform 0.2s;
+    user-select: none;
+}
+.collapsible-experience .arrow svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: #888;
+}
+.collapsible-experience .show-more-text {
+    font-size: 1rem;
+    color: #aaa;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    margin-left: 0;
+}
+.collapsible-experience .arrow.expanded {
+    transform: rotate(180deg);
+}
+.collapsible-toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.company-name {
+    color: #4094d6;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin: 0.2rem 0 0.2rem 0;
+}
+@media (max-width: 600px) {
+    .collapsible-toggle-row {
+        gap: 0.3rem;
+    }
 }
