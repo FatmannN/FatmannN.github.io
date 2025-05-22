@@ -55,3 +55,27 @@ function toggleExperienceDetails(summaryElem) {
         if (showMoreText) showMoreText.textContent = 'Show More';
     }
 }
+
+function toggleProjectDetails(button) {
+    const details = button.nextElementSibling;
+    const showMoreText = button.querySelector('.show-more-text');
+    const arrow = button.querySelector('.arrow');
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+        showMoreText.textContent = 'Show Less';
+        arrow.classList.add('expanded');
+    } else {
+        details.style.display = 'none';
+        showMoreText.textContent = 'Show More';
+        arrow.classList.remove('expanded');
+    }
+}
+
+function showNextCCACImage() {
+    const img = document.getElementById('ccac-main-img');
+    if (img.src.includes('CCAC-Winner%201.jpg') || img.src.includes('CCAC-Winner%201.jpg'.replace(' ', '%20'))) {
+        img.src = 'images/CCAC-Winner 2.jpg';
+    } else {
+        img.src = 'images/CCAC-Winner 1.jpg';
+    }
+}

@@ -225,22 +225,70 @@ section h2 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
     color: #E3EAF2;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
 }
 
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #232F3E;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #E3EAF2;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+    color: #A0CFFF;
+    line-height: 1.6;
+}
+
+.project-details {
+    list-style: none;
+    margin: 0.2rem 0 0.2rem 0;
+    padding-left: 0;
+}
+
+.project-details li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #D0E2FF;
+}
+
+.project-details li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #1E88E5;
+}
+
 .project-tags {
-    margin: 1rem 0;
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .project-tags span {
-    background: #e0e0e0;
-    padding: 0.3rem 0.8rem;
+    background: rgba(30, 136, 229, 0.1);
+    color: #1E88E5;
+    padding: 0.15rem 0.7rem;
     border-radius: 15px;
-    font-size: 0.8rem;
-    margin-right: 0.5rem;
+    font-size: 0.85rem;
+    border: 1px solid rgba(30, 136, 229, 0.3);
+    margin-bottom: 0.3rem;
 }
 
 /* Experience Section */
@@ -791,5 +839,134 @@ footer {
 @media (max-width: 600px) {
     .collapsible-toggle-row {
         gap: 0.3rem;
+    }
+}
+
+.show-more-btn {
+    background: none;
+    border: none;
+    color: #b0b8be;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    margin: 0.5rem 0 0.2rem 0;
+    transition: color 0.2s;
+    outline: none;
+}
+.show-more-btn:hover {
+    color: #1E88E5;
+}
+.show-more-text {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+.arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+.arrow.expanded {
+    transform: rotate(180deg);
+}
+
+.achievements {
+    padding: 5rem 1rem;
+    background: transparent;
+}
+.achievements h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: rgba(245, 247, 250, 0.7);
+}
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.achievement-card {
+    background: #18222D;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    color: #E3EAF2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+.achievement-image {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background: #232F3E;
+}
+.achievement-details {
+    text-align: center;
+}
+.achievement-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #E3EAF2;
+}
+.achievement-details p {
+    color: #A0CFFF;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.achievement-details a {
+    color: #1E88E5;
+    text-decoration: underline;
+    font-weight: 500;
+}
+.achievement-image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+}
+.achievement-image-slider .achievement-image {
+    margin-bottom: 0;
+}
+.arrow.right-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #b0b8be;
+    background: rgba(24,34,45,0.7);
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 2;
+}
+.arrow.right-arrow:hover {
+    background: #1E88E5;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .achievement-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .achievement-card {
+        padding: 1rem;
+    }
+    .achievement-image, .achievement-image-slider {
+        max-width: 100%;
+        height: 140px;
     }
 }
