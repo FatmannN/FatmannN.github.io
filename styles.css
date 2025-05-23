@@ -970,3 +970,10 @@ footer {
         height: 140px;
     }
 }
+
+.achievement-image-informs {
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    display: block;
+}
