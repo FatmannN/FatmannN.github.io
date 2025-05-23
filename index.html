@@ -15,6 +15,11 @@
             <div class="logo">
                 <a href="#home">Tirth Patel</a>
             </div>
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -23,6 +28,17 @@
             </ul>
         </div>
     </nav>
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <div class="mobile-nav">
+            <span class="close-mobile-nav" id="close-mobile-nav">&times;</span>
+            <ul>
+                <li><a href="#about" onclick="closeMobileNav()">About</a></li>
+                <li><a href="#projects" onclick="closeMobileNav()">Projects</a></li>
+                <li><a href="#experience" onclick="closeMobileNav()">Experience</a></li>
+                <li><a href="#contact" onclick="closeMobileNav()">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -34,6 +50,10 @@
             <div class="cta-buttons">
                 <a href="#projects" class="btn primary">View Projects</a>
                 <a href="Resume - Tirth.pdf" class="btn secondary" target="_blank">View Resume</a>
+            </div>
+            <div class="social-links" style="margin-top: 1.5rem;">
+                <a href="https://www.linkedin.com/in/tpatel22/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/FatmannN" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
         <!-- Hero Section Scroll Arrow -->
@@ -323,6 +343,96 @@
                     <p>Presented our poster on LLM-Powered Agents for B2B Sales Pipeline.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <h2>Certifications</h2>
+        <div class="certification-grid">
+            <div class="certification-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="certification-logo">
+                <div class="certification-details">
+                    <h3>IBM Data Analyst Specialization</h3>
+                    <p>IBM</p>
+                    <p>Issued Jul 2024</p>
+                    <a href="IBM Data Analyst Certificate.pdf" target="_blank" class="cert-link">View Certificate (PDF)</a>
+                </div>
+            </div>
+            <div class="certification-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="certification-logo">
+                <div class="certification-details">
+                    <h3>Microsoft Certified: Azure Fundamentals</h3>
+                    <p>Microsoft</p>
+                    <p>Issued Feb 2025</p>
+                    <a href="https://www.credly.com/badges/442bf5c7-f567-404e-a92f-738d25426134/linked_in_profile" target="_blank" class="cert-link">Show credential</a>
+                </div>
+            </div>
+            <div class="certification-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo" class="certification-logo">
+                <div class="certification-details">
+                    <h3>Microsoft Certified: Azure AI Fundamentals</h3>
+                    <p>Microsoft</p>
+                    <p>Issued Oct 2024</p>
+                    <a href="https://www.credly.com/badges/ed14e7c3-fc31-4ffb-98e0-424193aa3297/linked_in_profile" target="_blank" class="cert-link">Show credential</a>
+                </div>
+            </div>
+            <div class="certification-card">
+                <img src="images/Coursera-Logo.png" alt="Coursera Logo" class="certification-logo">
+                <div class="certification-details">
+                    <h3>Convolutional Neural Networks</h3>
+                    <p>Coursera</p>
+                    <p>Issued Mar 2021</p>
+                    <p>Credential ID TEL67QN9WNJA</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/TEL67QN9WNJA" target="_blank" class="cert-link">Show credential</a>
+                </div>
+            </div>
+            <div class="certification-card">
+                <img src="images/Coursera-Logo.png" alt="Coursera Logo" class="certification-logo">
+                <div class="certification-details">
+                    <h3>Machine Learning with Python</h3>
+                    <p>Coursera</p>
+                    <p>Issued Mar 2020</p>
+                    <p>Credential ID LASGXVLZ5CTE</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/LASGXVLZ5CTE" target="_blank" class="cert-link">Show credential</a>
+                </div>
+            </div>
+            <div class="certification-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="certification-logo">
+                <div class="certification-details">
+                    <h3>Python for Data Science and AI</h3>
+                    <p>IBM</p>
+                    <p>Issued Mar 2020</p>
+                    <p>Credential ID 4KDNVJQGGNQT</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/4KDNVJQGGNQT" target="_blank" class="cert-link">Show credential</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span>Data Analysis</span>
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Power BI</span>
+            <span>Tableau</span>
+            <span>Machine Learning</span>
+            <span>Predictive Modeling</span>
+            <span>Data Visualization</span>
+            <span>Feature Engineering</span>
+            <span>Business Intelligence</span>
+            <span>Statistical Analysis</span>
+            <span>Excel</span>
+            <span>Deep Learning</span>
+            <span>Natural Language Processing (NLP)</span>
+            <span>Data Cleaning</span>
+            <span>Dashboard Development</span>
+            <span>ETL</span>
+            <span>Project Management</span>
+            <span>Communication</span>
         </div>
     </section>
 

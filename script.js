@@ -79,3 +79,30 @@ function showNextCCACImage() {
         img.src = 'images/CCAC-Winner 1.jpg';
     }
 }
+
+// Mobile nav hamburger menu logic
+const hamburger = document.getElementById('hamburger-menu');
+const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+const closeMobileNavBtn = document.getElementById('close-mobile-nav');
+
+function openMobileNav() {
+    mobileNavOverlay.style.display = 'flex';
+}
+function closeMobileNav() {
+    mobileNavOverlay.style.display = 'none';
+}
+
+if (hamburger) {
+    hamburger.addEventListener('click', openMobileNav);
+}
+if (closeMobileNavBtn) {
+    closeMobileNavBtn.addEventListener('click', closeMobileNav);
+}
+// Close mobile nav when clicking outside the menu
+if (mobileNavOverlay) {
+    mobileNavOverlay.addEventListener('click', function(e) {
+        if (e.target === mobileNavOverlay) {
+            closeMobileNav();
+        }
+    });
+}
