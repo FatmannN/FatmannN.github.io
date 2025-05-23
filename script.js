@@ -106,3 +106,14 @@ if (mobileNavOverlay) {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const flipTitle = document.querySelector('.flip-title');
+  if (!flipTitle) return;
+  setTimeout(() => {
+    flipTitle.classList.add('strike');
+    setTimeout(() => {
+      flipTitle.classList.add('flipped');
+    }, 1400);
+  }, 1200);
+});
